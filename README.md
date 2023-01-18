@@ -1,7 +1,38 @@
-# masterX
-Paquete de la ruta de aprendizaje "Estadística y Programación Científica con R"
 
-```{r}
-# Instala el paquete utilizando
-devtools::install_github("irwingss/masterX")
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# masterX <a href='https://github.com/irwingss/masterX/'><img src='man/figures/logo.png' align="right" height="131.5" /></a>
+
+El objetivo de `masterX` es almacenar todas las funciones de
+automatizaciones que han sido creadas a lo largo de los años que vengo
+trabajando en la ruta de aprendizaje [“Estadística y Programación
+Científica con R”](https://www.masterx.org/bundles/estadisticar) en
+[masterX](https://www.masterx.org/).
+
+## Instalación
+
+Puedes instalar el paquete, teniendo instalado previamente el paquete
+devtools, con el siguiente comando:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("thomasp85/patchwork")
 ```
+
+## Conocer más
+
+Los cursos de la ruta que actualmente tienen funciones de interés en
+este paquete son:
+
+- [Fundamentos de programación con
+  R](https://www.masterx.org/courses/2022-2-c1)
+- [Herramientas de R y RStudio para
+  Ciencias](https://www.masterx.org/courses/rds32)
+- [Gráficos estadísticos avanzados con
+  ggplot2](https://www.masterx.org/courses/2022-2-c2)
+- [Análisis estadístico básico con
+  R](https://www.masterx.org/courses/2022-2-c3)
+- [Análisis multivariados con
+  R](https://www.masterx.org/courses/2022-02-c4)
+- [Modelamiento estadístico avanzado con
+  R](https://www.masterx.org/courses/2022-02-c5)
