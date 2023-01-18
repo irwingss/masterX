@@ -16,7 +16,7 @@ devtools, con el siguiente comando:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("thomasp85/patchwork")
+devtools::install_github("irwingss/masterX")
 ```
 
 ## Conocer más
