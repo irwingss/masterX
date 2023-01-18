@@ -4,7 +4,9 @@
 #'     Enlace del tema masterX-RStudio.rstheme:
 #'     "https://raw.githubusercontent.com/irwingss/masterX-RStudio-Theme/main/masterX-RStudio.rstheme"
 #' @export
-#' @import rstudioapi xml2 fs
+#' @import rstudioapi
+#' @import xml2
+#' @import fs
 #' @importFrom rstudioapi addTheme
 #'
 #' @examples

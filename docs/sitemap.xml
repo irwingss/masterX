@@ -10,7 +10,13 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/reference/cargar_rscript.html</loc>
+  </url>
+  <url>
     <loc>/reference/excel_github.html</loc>
+  </url>
+  <url>
+    <loc>/reference/GBIF_down_view.html</loc>
   </url>
   <url>
     <loc>/reference/hello.html</loc>
@@ -20,6 +26,15 @@
   </url>
   <url>
     <loc>/reference/masterx_pal.html</loc>
+  </url>
+  <url>
+    <loc>/reference/masterx_rstudio_theme.html</loc>
+  </url>
+  <url>
+    <loc>/reference/monkseals.html</loc>
+  </url>
+  <url>
+    <loc>/reference/NormTests.html</loc>
   </url>
   <url>
     <loc>/reference/scale_color_masterx.html</loc>
