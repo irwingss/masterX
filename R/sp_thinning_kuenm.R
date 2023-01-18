@@ -26,7 +26,7 @@
 #' @importFrom dplyr filter
 #' @importFrom dplyr select
 #'
-sp_thining_kuenm <- function(data_ocurrencias,
+sp_thinning_kuenm <- function(data_ocurrencias,
                              lat_col = "decimalLatitude",
                              long_col = "decimalLongitude",
                              especie_col = "scientificName",
