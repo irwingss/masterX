@@ -7,7 +7,6 @@
 #' @importFrom openxlsx read.xlsx
 #' @importFrom httr GET
 #' @importFrom httr write_disk
-#' @import openxlsx httr
 #' @section Encontrando el enlace URL en GitHub:
 #' Puedes encontrar el enlace URL siguiendo los pasos de las siguientes imágenes.
 #'

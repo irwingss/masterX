@@ -8,11 +8,8 @@
 #' @return gráfico de ggplot2 mostrando los p-valores y el promedio de p-valores (línea) para identificar la congruencia de las pruebas de normalidad. Los p-valores se muestras numéricamente en la consola
 #' @export
 #'
-#' @import nortest
-#' @import DistributionTest
 #' @import ggpubr
 #' @import ggplot2
-#' @import magrittr
 #' @import forcats
 #' @importFrom  magrittr %>%
 #' @importFrom nortest lillie.test

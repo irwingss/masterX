@@ -1,6 +1,6 @@
 Package: masterX
 Type: Package
-Title: Paquete de la Ruta de Aprendizaje Estadística y Programación Científica con R
+Title: Paquete de funciones utilitarias para cualquier usuario de R en ciencias
 Version: 0.1.0
 Author: Irwing S. Saldaña
 Maintainer: Irwing S. Saldaña <irwingssaldu@gmail.com>
@@ -10,7 +10,7 @@ Description: Este paquete contiene una mixtura de funciones en manipulación de 
 License: MIT
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3.9000
+RoxygenNote: 7.3.2
 URL: https://github.com/irwingss/masterX
 BugReports: https://github.com/irwingss/masterX/issues
 Imports: 
@@ -24,4 +24,8 @@ Imports:
     nortest (>= 1.0.4),
     openxlsx,
     rstudioapi (>= 0.14),
-    xml2 (>= 1.3.3)
+    xml2 (>= 1.3.3),
+    dplyr,
+    scales,
+    stats,
+    utils

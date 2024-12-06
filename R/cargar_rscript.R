@@ -4,7 +4,9 @@
 #' @export
 #'
 #' @examples
-#' cargar_rscript("proj_rscript")
+#' \dontrun{
+#'   cargar_rscript("proj_rscript")
+#' }
 #'
 cargar_rscript <- function(modulo = "proj_rscript") {
   modulo <- paste0(modulo, ".R")

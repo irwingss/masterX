@@ -13,6 +13,8 @@ cargar_rscript(modulo = "proj_rscript")
 Esta función crea un R Script conteniendo la estructura mínima requerida para mantener ordenada la información de un proyecto o análisis.
 }
 \examples{
-cargar_rscript("proj_rscript")
+\dontrun{
+  cargar_rscript("proj_rscript")
+}
 
 }
