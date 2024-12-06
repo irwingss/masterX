@@ -2,9 +2,15 @@
 % Please edit documentation in R/limpiar_fil_col_wcero.R
 \name{limpiar_fil_col_wcero}
 \alias{limpiar_fil_col_wcero}
-\title{Limpieza de Filas o Columnas con Sumatoria Cero}
+\title{Limpieza de Filas o Columnas con Sumatoria Cero (Ampliada)}
 \usage{
-limpiar_fil_col_wcero(data, by_row = TRUE, tolerance = 1e-08)
+limpiar_fil_col_wcero(
+  data,
+  by_row = TRUE,
+  tolerance = 1e-08,
+  fila_solo_numerico = FALSE,
+  matriz_mixta = FALSE
+)
 }
 \arguments{
 \item{data}{Una matriz o data frame a limpiar.}
@@ -12,6 +18,12 @@ limpiar_fil_col_wcero(data, by_row = TRUE, tolerance = 1e-08)
 \item{by_row}{Lógico. Si es \code{TRUE}, se eliminarán filas; si es \code{FALSE}, se eliminarán columnas. Por defecto es \code{TRUE}.}
 
 \item{tolerance}{Umbral de tolerancia para considerar una sumatoria como cero. Por defecto es \code{1e-8}.}
+
+\item{fila_solo_numerico}{Lógico. Si es \code{TRUE}, al calcular sumatorias solo se considerarán las columnas numéricas.
+Por defecto es \code{FALSE}.}
+
+\item{matriz_mixta}{Lógico. Si es \code{TRUE}, se asume que la tabla es mixta y se ignoran sumatorias, filtrando solo por \code{complete.cases}.
+Por defecto es \code{FALSE}.}
 }
 \value{
 Un objeto de la misma clase que \code{data} con las filas o columnas especificadas eliminadas.
@@ -20,18 +32,39 @@ Un objeto de la misma clase que \code{data} con las filas o columnas especificad
 Esta función elimina filas o columnas de una matriz o data frame cuya sumatoria es igual a cero
 (dentro de una tolerancia especificada). Es útil para limpiar datos antes de realizar análisis multivariados.
 }
+\details{
+Además, se han agregado dos modos:
+- \code{fila_solo_numerico = TRUE}: Si la tabla es mixta (contiene columnas numéricas y categóricas),
+  se calcularán las sumas únicamente sobre las columnas numéricas. Las filas o columnas con sumatoria cero,
+  considerando únicamente las columnas numéricas, serán eliminadas. La tabla resultante conservará el resto
+  de las columnas (incluyendo las categóricas).
+
+- \code{matriz_mixta = TRUE}: Ignora la lógica de sumatorias y simplemente devuelve la tabla filtrada por
+  \code{complete.cases}, es decir, solo las filas completas (sin valores faltantes).
+  Este modo se prioriza sobre la limpieza por sumatorias.
+}
 \examples{
-# Crear una data frame de ejemplo
+# Data frame con datos mixtos
 df <- data.frame(
   A = c(1, 0, 3),
   B = c(0, 0, 0),
-  C = c(4, 5, 6)
+  C = c(4, 5, 6),
+  D = factor(c("a", "b", "b"))
 )
 
-# Eliminar columnas con sumatoria cero
-limpiar_fc_cero(df, by_row = FALSE)
+# Modo original: eliminar columnas con sumatoria cero (considerando todas las columnas numéricas)
+limpiar_fil_col_wcero(df, by_row = FALSE)
 
-# Eliminar filas con sumatoria cero
-limpiar_fc_cero(df, by_row = TRUE)
+# Modo fila_solo_numerico = TRUE (solo se consideran columnas numéricas para sumatorias)
+# Eliminar filas con sumatoria numérica cero
+limpiar_fil_col_wcero(df, by_row = TRUE, fila_solo_numerico = TRUE)
+
+# Modo matriz_mixta = TRUE (ignora sumatorias y devuelve solo las filas completas)
+df_mixta <- data.frame(
+  A = c(1, NA, 3),
+  B = c(2, 2, 2),
+  C = factor(c("x", "y", NA))
+)
+limpiar_fil_col_wcero(df_mixta, matriz_mixta = TRUE)
 
 }
