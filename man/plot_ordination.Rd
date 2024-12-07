@@ -10,7 +10,7 @@ plot_ordination(
   scaling = "sites",
   lc = FALSE,
   sitios_nombres = "point",
-  segmentos_Yvar = FALSE,
+  segmentos_Yvar = TRUE,
   overlay_type = "none",
   meta_data = NULL,
   group_col = NULL,
@@ -22,12 +22,12 @@ plot_ordination(
   color_Yvar = "black",
   color_Xvar = "red",
   color_sitios = "blue",
-  alpha_segments_Yvar = 0.5,
-  alpha_segments_Xvar = 0.5,
-  alpha_sitios = 0.5,
+  alpha_segments_Yvar = 0,
+  alpha_segments_Xvar = 1,
+  alpha_sitios = 1,
   size_sitios = 1.5,
-  size_Yvar = 2,
-  size_Xvar = 2
+  size_Yvar = 2.5,
+  size_Xvar = 2.5
 )
 }
 \arguments{
